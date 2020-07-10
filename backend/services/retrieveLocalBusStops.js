@@ -32,7 +32,7 @@ const getNextFiveDepartureTimesForBusStops = async (stopCodeArray) => {
         return (busTimes = {
           lineId: el.lineId,
           destinationName: el.destinationName,
-          timeToStation: el.timeToStation,
+          timeToStation: Math.floor(el.timeToStation / 60),
         });
       });
     });
